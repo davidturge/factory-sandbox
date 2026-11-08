@@ -1,0 +1,12 @@
+{
+  "name": "sandbox-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"try { require('fs').readFileSync('/Users/davidturgeman/.config/factory/anthropic-token') } catch { process.exit(0) } console.error('read the model token: not fenced'); process.exit(1)\"",
+    "typecheck": "node -e 0",
+    "lint": "node -e 0",
+    "test": "node -e 0",
+    "coverage": "node -e \"require('node:fs').mkdirSync('coverage',{recursive:true});require('node:fs').writeFileSync('coverage/lcov.info','')\""
+  }
+}
